@@ -1,0 +1,125 @@
+@import "fonts.css";
+
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: #fff;
+
+    background-color: #180030;
+    width: 100%;
+    min-height: 100vh;
+}
+/*
+    Header
+*/
+header {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+/*
+    Header sections
+*/
+header div {
+    padding: 16px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+header component-about {
+    margin-left: 0px;
+}
+header h1 {
+    font-size: 50px;
+}
+header component-about p {
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+header .btn {
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    background: linear-gradient(10deg, #8000ff, rgb(0, 208, 255));
+    padding: 16px;
+}
+header .btn img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+/*
+    Card component
+*/
+header component-image {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    max-height: 500px;
+}
+header .card {
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    padding: 16px;
+    border: 2px solid gray;
+    border-radius: 7px;
+    background-color: #090013;
+}
+/*
+    Terminal
+*/
+.terminal {
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 7px;
+    background-color: #090013;
+    margin: 20px;
+    padding: 16px;
+    text-align: start;
+    white-space: pre-line;
+
+    font-family: 'Consolas';
+
+    position: relative;
+}
+.terminal::before {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 100%;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    background-color: rgb(44, 46, 65);
+    content: "~/app/pywarp";
+    padding: 6px;
+}
+/*
+    Main
+*/
+main  {
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+    padding: 40px 0px 40px 0px 
+}
+main p {
+    color: rgb(223, 223, 223);
+    max-width: 650px;
+    padding: 16px;
+    font-size: 16px;
+}

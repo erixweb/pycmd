@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pywarp</title>
+    <link rel="icon" href="./images/warp.webp">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script defer>
+        window.addEventListener("load", () => {
+            const script = document.createElement("script")
+
+            script.src = "scripts/header.js"
+
+            document.body.append(script)
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <component-about>
+                <h1>
+                    Pywarp
+                </h1>
+                <p>
+                    La herramienta todo en uno para scrapear, analizar, instalar creada en python.   
+                </p>
+                <section>
+                    <a href="/download" class="btn">
+                        <img src="images/win.svg" alt="Imagen de windows">
+                        Descargar beta
+                    </a>
+                </section>
+            </component-about>
+            <component-image>
+                <div class="card"></div>
+            </component-image>
+        </div>
+    </header>
+    <main>
+        <h1>
+            Hecho para web scraping
+        </h1>
+        <p>
+            Con pywarp puedes hacer web scrapping de forma fácil pasando unos pocos argumentos.
+        </p>
+        <div class="terminal">
+            ./pywarp
+            webscrap https://example.com title -r
+            Example Domain
+        </div>
+        <p>
+            Guarda todo lo que scrapeas usando el parameto -s (save) en vez de -r (return)
+        </p>
+        <div class="terminal">
+            ./pywarp
+            webscrap https://example.com title -s
+
+            Scrapped content
+            Path: ./scrapped
+        </div>
+    </main>
+</body>
+</html>

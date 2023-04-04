@@ -4,50 +4,32 @@ from os import system
 
 
 def main():
-    inputCmd = input("")
+    cmd = input("").split(" ")
 
-    # Install html
-    if inputCmd.startswith("inst --html"):
+    if cmd[0] == "inst":
+        # inst https://example.com [-s, -r]
 
-        url = inputCmd.replace("inst --html ", "")
+        url = cmd[1]
+        pkg = url.replace("https://", "")
 
-        print(f"Installing resource {url}")
-        # Tiempo cuando empiez a descargarse
-        initialTime = time.time()
+        installInitialTime = time.time()
+        stream = requests.get(url)
 
-        opener = requests.get(url)
-        # Escribir al archivo inst en el directorio actual
-        with open("./inst", "w", encoding="utf-16") as f:
-            f.write(opener.text)
-        
-        finalTime = time.time()
-        
-        print(f"Installed {url} in {str(finalTime - initialTime)[0:5]} ms")
-    elif (inputCmd.startswith("inst --execute")):
-        url = inputCmd.replace("inst --execute ", "")
+        if cmd[2] == "-r":
+            print(stream.text)
+        elif cmd[2] == "-s":
+            with open("./installed", "w", encoding="utf-16") as f:
+                f.write(stream.text)
 
-        print(f"Installing resource {url}")
-        # Tiempo cuando empiez a descargarse
-        initialTime = time.time()
+            installFinalTime = time.time()
+            print(f"\nInstalled {pkg} in {str(installFinalTime - installInitialTime)[0:5] * 10} ms\nPath: ./installed")
+    elif cmd[0] == "webscrap":
+        # webscrap https://example.com [element] [-r, -s]
 
-        opener = requests.get(url)
-        # Escribir al archivo inst en el directorio actual
-        with open(f"./exe-{str(url)[0:5]}", "w", encoding="utf-16") as f:
-            f.write(opener.text)
-        
-        finalTime = time.time()
-        
-        print(f"Installed {url} in {str(finalTime - initialTime)[0:5]} ms")
-
-        system(f"exe-{str(url)[0:5]}")
-    elif (inputCmd.startswith("scrap ") and inputCmd.endswith("--save")):
-        cmd = inputCmd.split(" ")
         url = cmd[1]
         element = cmd[2]
+        conf = cmd[3]
 
-        cmd.pop(0)
-        cmd.pop(2)
-        
         res = requests.get(url).text
 
         elementIndex = res.find(f"<{element}>")
@@ -56,10 +38,11 @@ def main():
 
         scrappedContent = res[startIndex:endIndex]
 
-
-        print(scrappedContent)
-
-    else:
-        main
-    
+        if conf == "-r":
+            print(scrappedContent)
+        elif conf == "-s":
+            with open("./scrapped", "w", encoding="utf-16") as f:
+                f.write(scrappedContent)
+     
+    main()
 main()
