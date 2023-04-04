@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErixWeb 🦾 | Desarollador web Front-End y Back-End catalán</title>
+    <script defer src="./chunk.js"></script>
+    <!-- Icon & styles -->
+    <link rel="icon" href="erixweb.ico" />
+    <link rel="stylesheet" href="/styles/style.css?v=2" type="text/css">
+    <!-- Meta tags -->
+    <meta 
+        name="robots"
+        content="follow, index"
+    />
+    <meta name="title" content="ErixWeb | Desarollador web Front-End 📱 y Back-End 📟 catalán">
+    <meta name="description" content="Hola, me llamo ErixWeb 👋 soy un desarollador web Front-End 📱 y Back-End 📟 catalán en Barcelona. Échale un vistazo a mi portfolio💻, artículos o blogs 🗣️ Front-End 📱 de React, JavaScript, HTML o CSS.">
+    <meta name="theme-color" content="#45CDFF">
+    <meta name="keywords" content="erixweb, desarollador web en barcelona, desarollador web en españa, desarollador web front-end, desarollador web back-end, frontend, backend, erixweb.github.io, erikweb, articulos web, portfolio, typescript, javascript, bun, php, node, nodejs, html, css, desarollador con mas de 2 años de experiencia, english, español, catalán, react, badalona, barcelona, wordpress, desarollo web, web dev">
+    <!-- OpenGraph -->
+    <meta name="og:site_name" content="erixweb.github.io">
+    <meta name="og:image" content="/images/er.webp">
+    <meta name="og:title" content="ErixWeb | Desarollador web Front-End 📱 y Back-End 📟 catalán">
+    <meta name="og:description" content="Hola, me llamo ErixWeb 👋 soy un desarollador web Front-End 📱 y Back-End 📟 catalán en Barcelona. Échale un vistazo a mi portfolio 💻, artículos o blogs 🗣️ Front-End 📱 de React, JavaScript, HTML o CSS.">
+    <meta name="og:locale" content="es_ES">
+    <meta name="og:type" content="website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@erixweb">
+    <meta name="twitter:image" content="/images/er.webp">
+    <meta name="twitter:domain" content="erixweb.github.io">
+    <meta name="twitter:site" content="@erixweb">
+</head>
+<body>
+
+    <nav>
+        <div class="wrap">
+            <img data-src="/images/er.webp" alt="Hola me llamo Erix soy un desarollador web Front-End y Back-End catalán. Hago articulos web, proyectos con gente. Visita mi página web para enterarte de todo lo que hago." loading="lazy" decoding="async" >
+            <div class="links"> 
+                <a href="#">
+                    Sobre mí
+                </a>
+                <a href="#proyectos">
+                    Proyectos
+                </a>
+                <a href="/articulos">
+                    Artículos
+                </a>
+            </div>
+        </div>
+    </nav>
+    <header id="sobremi">
+        
+        <div>
+            <h1>ErixWeb 👋</h1>
+            <p>
+                Hola, me llamo Erix. Soy un desarollador Front-End 📱 y Back-End 🗄️ web catalán 🗣️ en Barcelona 🏙️. 
+            </p>
+        </div>
+    </header>
+    <section id="social">
+        <div>
+            <a href="https://github.com/erixweb" target="_blank">
+                <img data-src="/images/social/github.svg" alt="Imagen de github">
+            </a>
+            <a href="https://twitter.com/erixweb" target="_blank">
+                <img data-src="/images/social/twitter.svg" alt="Imagen de twitter">
+            </a>
+        </div>
+    </section>
+    <main>
+        <section id="sobremi">
+            <h2>
+                Sobre mí
+            </h2>
+            <p>
+                Me llamo Erik y soy un desarrollador web fullstack es decir, Front-End y Back-End. Siempre me ha dado curiosidad cómo están hechas las páginas web y por eso empecé con la programación. Empecé con PHP y después JavaScript.
+            </p>
+            <p>
+                Empezar con PHP hizo que pueda entender otros lenguajes y me dio la habilidad de adaptarme fácilmente.
+            </p>
+        </section>
+        <section id="tecnologias">
+            <h2>Tecnologías</h2>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <img data-src="/images/technologies/html.svg" alt="Etiqueta HTML tecnología">
+                    HTML
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/css.svg" alt="Etiqueta CSS tecnología">
+                    CSS
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/js.svg" alt="Etiqueta JavaScript tecnología">
+                    JavaScript
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/php.svg" alt="Etiqueta PHP tecnología">
+                    PHP
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/react.svg" alt="Etiqueta React tecnología">
+                    React
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/sql.svg" alt="Etiqueta SQL tecnología">
+                    SQL
+                </div>
+                <div class="tech-card">
+                    <img data-src="/images/technologies/astro.svg" alt="Etiqueta Astro tecnología">
+                    Astro
+                </div>
+            </div>
+        </section>
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="projects">
+                <a class="project" href="https://astrowiki.vercel.app" target="_blank">
+                    <img data-src="/images/projects/astrowiki_thumb.webp" alt="Encuentra solución a todas tus pregunta sobre Astro.js. Un framework de JavaScript hecho para hacer páginas web rápidas con el JavaScript necesario." loading="lazy">
+                    <h3>Astrowiki</h3>
+                    <p>
+                        Encuentra solución a todas tus pregunta sobre Astro.js. Un framework de JavaScript hecho para hacer páginas web rápidas con el JavaScript necesario.
+                    </p>
+                </a>
+                <a class="project" href="https://windful.vercel.app" target="_blank">
+                    <img data-src="/images/projects/windfullthumb.webp" alt="Windful es una librería de CSS basada en Tailwind. Está compuesta por 300 lineas, muy ligera pero eficaz." loading="lazy">
+                    <h3>Windful</h3>
+                    <p>
+                        Windful es una librería de CSS basada en Tailwind. Está compuesta por 300 lineas, muy ligera pero eficaz.
+                    </p>
+                </a>
+                <a class="project" href="https://reporeq.vercel.app" target="_blank">
+                    <img data-src="/images/projects/reporeq_thumbnail.webp" alt="Reporeq es un proyecto hecho por ErixWeb usando la API de Github. Consiste en que el usuario pone el nombre de github de alguien y hace un fetch a la API de Github, devolviendo todos sus repos y información del usuario." loading="lazy">
+                    <h3>Reporeq</h3>
+                    <p>
+                        Reporeq es un proyecto en el que el usuario proporciona el nombre de usuario de alguien en Github y entonces, se hace un fetch a la API de Github devolviendo las repos y información publica del usuario.
+                    </p>
+                </a>
+                <a class="project" href="https://week-recap.vercel.app" target="_blank">
+                    <img data-src="/images/projects/weekrecappng.webp" alt="Week-Recap es una aplicación web que he hecha por ErixWeb para hacer una lista de tus gastos semanales." loading="lazy">
+                    <h3>Week-Recap</h3>
+                    <p>
+                        Week-Recap es una aplicación web que he hecha por ErixWeb para hacer una lista de tus gastos semanales.
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="/proyectos" class="showmore">Ver más</a>
+            </div>
+        </section>
+        <section class="articles" id="artículos">
+            <h2>Artículos</h2>
+            <a href="/articulo/objetivos-2023">
+                <article>
+                    <article-image>
+                        <img data-src="/images/technologies/js.svg" alt="Imagen de artículo sobre mis micro-objetivos JS en 2023">
+                    </article-image>
+                    <article-content>
+                        <h3>Mis objetivos para 2023</h3>
+                        <span>23/03/23</span>
+                    </article-content>
+                </article>
+            </a>
+            <a href="/articulo/bun-es-increible">
+                <article>
+                    <article-image>
+                        <img data-src="/images/technologies/bun.svg" alt="Artículo en el que explico el runtime de JavaScript Bun.js y por qué me encanta.">
+                    </article-image>
+                    <article-content>
+                        <h3>Bun es increíble</h3>
+                        <span>04/03/23</span>
+                    </article-content>
+                </article>
+            </a>
+            <a href="/articulo/async-await-en-javascript">
+                <article>
+                    <article-image>
+                        <img data-src="/images/technologies/js.svg" alt="Artículo de cómo usar async y await en JavaScript y por qué se usa async y await.">
+                    </article-image>
+                    <article-content>
+                        <h3>Async/await JavaScript</h3>
+                        <span>25/12/22</span>
+                    </article-content>
+                </article>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
