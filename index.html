@@ -62,6 +62,33 @@
             Scrapped content
             Path: ./scrapped
         </div>
+        <h1>
+            Instala recursos rapidamente
+        </h1>
+        <p>
+            Con tan solo la url de un sitio instala su contenido, soporta HTML, otros tipos de texto y instalaciones binarias.
+        </p>
+        <div class="terminal">
+            ./pywarp
+            inst https://example.com -s
+            Installing resource example.com
+
+            Installed example.com in 420ms
+            Path: ./installed
+        </div>
+        <p>
+            Utiliza el parametro -r para solo visualizar el contenido de la página.
+        </p>
+        <div class="terminal">
+            ./pywarp
+            inst https://example.com -r
+            
+<xmp><html>
+    <main>
+        ...
+    </main>
+</html></xmp>
+        </div>
     </main>
 </body>
 </html>
