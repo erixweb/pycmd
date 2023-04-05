@@ -7,7 +7,7 @@ from colorama import Fore
 colorama.init()
 
 try:
-    version = "0.2"
+    version = "0.2.1"
     while True:
         cmd: str = ""
         cmd: input = input("").split(" ")
@@ -61,10 +61,10 @@ try:
             if cmd[2] == "--node":
                 print(f"{Fore.Green}Installing package.json dependencies")
                 system("npm install")
-                print(f"{Fore.Green}Starting web server{Fore.WHITE}")
+                print(f"{Fore.GREEN}Starting web server{Fore.WHITE}")
                 system("npm run dev")
         else:
-            print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst ")
+            print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst{Fore.WHITE}")
 except KeyboardInterrupt:
     system("cls")
     print(f"{Fore.GREEN}Succesfully exited.")
