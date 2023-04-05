@@ -1,4 +1,6 @@
-title pywarp | %USERNAME%
+@echo off
+
+title pywarp
 
 if NOT exist C:\pywarp\pywarp.py (
     cls
@@ -9,3 +11,4 @@ if NOT exist C:\pywarp\pywarp.py (
     cls
     python C:\pywarp\pywarp.py
 )
+pause
