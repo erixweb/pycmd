@@ -8,7 +8,7 @@ from colorama import Fore
 colorama.init()
 
 try:
-    version = "0.2.3"
+    version = "0.3"
     while True:
         cmd: str = ""
         cmd: input = input("").split(" ")
@@ -98,6 +98,15 @@ try:
                 print(f"{Fore.GREEN}[100%] Created {Fore.LIGHTCYAN_EX}{pkg} app took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
         elif cmd[1] == "dir":
             print(f"{Fore.GREEN}Your current dir is {Fore.LIGHTCYAN_EX}{getcwd()}")
+        elif cmd[1] == "vol":
+            if cmd[2] == "c" or cmd[2] == "C":
+                system("""cd C:\\""")
+            elif cmd[2] == "e" or cmd[2] == "E":
+                system("""cd C:\\""")
+        elif cmd[1] == "cd":
+            goto = cmd[2]
+
+            system(f"cd {goto}")
         else:
             print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst{Fore.WHITE}")
 except KeyboardInterrupt:
