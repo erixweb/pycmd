@@ -7,12 +7,13 @@ from colorama import Fore
 colorama.init()
 
 try:
+    version = "0.2"
     while True:
         cmd: str = ""
         cmd: input = input("").split(" ")
 
-        if cmd[1] == "help":
-            print("Help")
+        if cmd[1] == "v" or cmd[1] == "version":
+            print(f"{Fore.GREEN}Your pywarp version is {version}")
         if cmd[1] == "inst":
             # inst https://example.com [-s, -r]
 
@@ -56,7 +57,12 @@ try:
                     f.write(scrappedContent)
                 installFinalTime = time.time()
             print(f"{Fore.GREEN}[100%] Scrapped {Fore.LIGHTCYAN_EX}{pkg} {Fore.GREEN}took {Fore.LIGHTCYAN_EX}{str((installFinalTime - installInitialTime) * 1000)[0:5]}ms{Fore.WHITE}")
-        
+        elif cmd[1] == "dev":
+            if cmd[2] == "--node":
+                print(f"{Fore.Green}Installing package.json dependencies")
+                system("npm install")
+                print(f"{Fore.Green}Starting web server{Fore.WHITE}")
+                system("npm run dev")
         else:
             print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst ")
 except KeyboardInterrupt:
