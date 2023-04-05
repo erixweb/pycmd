@@ -14,6 +14,10 @@ try:
 
         if cmd[1] == "v" or cmd[1] == "version":
             print(f"{Fore.GREEN}Your pywarp version is {version}{Fore.WHITE}")
+        elif cmd[1] == "upgrade":
+            print(f"{Fore.GREEN}Upgrading your pywarp version{Fore.WHITE}")
+            system("""powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/erixweb/pycmd/master/main.py', 'C:\pywarp\pywarp.py')""")
+            print(f"{Fore.GREEN}Upgraded your pywarp version, refresh this window{Fore.WHITE}")
         elif cmd[1] == "fetch":
             # inst https://example.com [-s, -r]
 
@@ -70,7 +74,14 @@ try:
                 pkg = cmd[2]
                 system(f"npm install {pkg}")
                 fTime = time.time()
-                print(f"{Fore.GREEN}--> Installed {Fore.LIGHTCYAN_EX}{pkg} took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
+                print(f"{Fore.GREEN}[100%] Installed {Fore.LIGHTCYAN_EX}{pkg} took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
+            elif cmd[3] == "--pnpm":
+                iTime = time.time()
+                print(f"{Fore.GREEN}Installing {Fore.LIGHTCYAN_EX}{pkg}")
+                pkg = cmd[2]
+                system(f"pnpm install {pkg}")
+                fTime = time.time()
+                print(f"{Fore.GREEN}[100%] Installed {Fore.LIGHTCYAN_EX}{pkg} took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
         elif cmd[1] == "create":
             pkg = cmd[2]
             iTime = time.time()
@@ -79,7 +90,7 @@ try:
                 system(f"npm create {pkg}@latest")
                 fTime = time.time()
                 print(f"{Fore.GREEN}[100%] Created {Fore.LIGHTCYAN_EX}{pkg} app took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
-            if cmd[3] == "--pnpm":
+            elif cmd[3] == "--pnpm":
                 print(f"{Fore.GREEN}Creating {Fore.LIGHTCYAN_EX}{pkg} app")
                 system(f"pnpm create {pkg}@latest")
                 fTime = time.time()
