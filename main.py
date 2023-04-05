@@ -1,6 +1,7 @@
 import time
 import requests
 from os import system
+from os import getcwd
 import colorama
 from colorama import Fore
 
@@ -95,6 +96,8 @@ try:
                 system(f"pnpm create {pkg}@latest")
                 fTime = time.time()
                 print(f"{Fore.GREEN}[100%] Created {Fore.LIGHTCYAN_EX}{pkg} app took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
+        elif cmd[1] == "dir":
+            print(f"{Fore.GREEN}Your current dir is {Fore.LIGHTCYAN_EX}{getcwd()}")
         else:
             print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst{Fore.WHITE}")
 except KeyboardInterrupt:
