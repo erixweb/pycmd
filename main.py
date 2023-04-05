@@ -59,7 +59,7 @@ try:
             print(f"{Fore.GREEN}[100%] Scrapped {Fore.LIGHTCYAN_EX}{pkg} {Fore.GREEN}took {Fore.LIGHTCYAN_EX}{str((installFinalTime - installInitialTime) * 1000)[0:5]}ms{Fore.WHITE}")
         elif cmd[1] == "dev":
             if cmd[2] == "--node":
-                print(f"{Fore.Green}Installing package.json dependencies")
+                print(f"{Fore.GREEN}Installing package.json dependencies")
                 system("npm install")
                 print(f"{Fore.GREEN}Starting web server{Fore.WHITE}")
                 system("npm run dev")
