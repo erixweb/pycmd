@@ -24,8 +24,8 @@
             <img src="images/warp.webp" alt="Imagen de pywarp">
 
             <div class="links">
-                <a href="/docs">
-                    Docs
+                <a href="/">
+                    Home
                 </a>
                 <a href="/download">
                     Download
@@ -40,10 +40,10 @@
                     Pywarp
                 </h1>
                 <p>
-                    La herramienta todo en uno para scrapear, analizar, instalar creada en python.   
+                    Shell para desarolladores web en Windows. Hecha para scrapear, analizar y descargar contenido.
                 </p>
                 <section>
-                    <a href="installer.bat" download class="btn">
+                    <a href="installer.bat" download class="download-btn">
                         <img src="images/win.svg" alt="Imagen de windows">
                         Descargar beta
                     </a>
@@ -62,16 +62,16 @@
             Con pywarp puedes hacer web scrapping de forma fácil pasando unos pocos argumentos.
         </p>
         <div class="terminal">
-            ./pywarp
-            pywarp webscrap https://example.com title -r
+            pywarp
+            webscrap https://example.com title -r
             Example Domain
         </div>
         <p>
             Guarda todo lo que scrapeas usando el parameto -s (save) en vez de -r (return)
         </p>
         <div class="terminal">
-            ./pywarp
-            pywarp webscrap https://example.com title -s
+            pywarp
+            webscrap https://example.com title -s
 
             Scrapped content
             Path: ./scrapped
@@ -83,8 +83,8 @@
             Con tan solo la url de un sitio instala su contenido, soporta HTML, otros tipos de texto y instalaciones binarias.
         </p>
         <div class="terminal">
-            ./pywarp
-            pywarp inst https://example.com -s
+            pywarp
+            fetch https://example.com -s
             Installing resource example.com
 
             Installed example.com in 420ms
@@ -94,8 +94,8 @@
             Utiliza el parametro -r para solo visualizar el contenido de la página.
         </p>
         <div class="terminal">
-            ./pywarp
-            pywarp inst https://example.com -r
+            pywarp
+            fetch https://example.com -r
             
 <xmp><html>
     <main>
@@ -103,6 +103,61 @@
     </main>
 </html></xmp>
         </div>
+        <h1>
+            Comandos por defecto
+        </h1>
+        <p>
+            También se incluyen comandos que vienen por defecto en Windows. Como cd o ls entre otros. Aparte de cd y ls se añade el "vol" para ir a el directorio C:// o E://
+        </p>
+        <div class="terminal">
+            pywarp
+            ls
+            - Desktop
+            - Downloads
+            - .dotnet
+            vol E
+            ls
+            - projects
+            - main
+            - work
+            cd work
+            cd mycompany
+        </div>
+        <h1>
+            Comando para VSCode integrado
+        </h1>
+        <p>
+            Para abrir visual studio code en pywarp, puedes utilizar el comando "vscode".
+        </p>
+        <div class="terminal">
+            vol E
+            ls
+            - projects
+            - main
+            - work
+            cd work
+            cd mycompany
+            vscode
+        </div>
+        <h1>
+            Comandos npm
+        </h1>
+        <p>
+            Pywarp tiene comandos para inicializar proyectos de node por defecto. Este comando requiere que tengas node.js & npm instalados. 
+        </p>
+        <div class="terminal">
+            mkdir proyecto
+            create vite --npm
+            ___>./my_project
+            Vanilla
+            JavaScript
+            dev --npm
+            VITE 
+            Started vite server at port 5137
+        </div>
+        <p>
+            Tambien compatibilidad con pnpm utilizando el parametro --pnpm en vez de --npm
+        </p>
     </main>
 </body>
 </html>

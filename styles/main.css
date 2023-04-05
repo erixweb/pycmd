@@ -78,7 +78,7 @@ header component-about p {
     max-width: 400px;
     margin-bottom: 40px;
 }
-header .btn {
+.download-btn {
     font-weight: 500;
     color: #fff;
     text-decoration: none;
@@ -86,7 +86,7 @@ header .btn {
     background: linear-gradient(10deg, #8000ff, rgb(0, 208, 255));
     padding: 16px;
 }
-header .btn img {
+.download-btn img {
     vertical-align: middle;
     width: 20px;
     height: 20px;
