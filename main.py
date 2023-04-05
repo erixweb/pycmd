@@ -7,14 +7,14 @@ from colorama import Fore
 colorama.init()
 
 try:
-    version = "0.2.1"
+    version = "0.2.3"
     while True:
         cmd: str = ""
         cmd: input = input("").split(" ")
 
         if cmd[1] == "v" or cmd[1] == "version":
-            print(f"{Fore.GREEN}Your pywarp version is {version}")
-        if cmd[1] == "inst":
+            print(f"{Fore.GREEN}Your pywarp version is {version}{Fore.WHITE}")
+        elif cmd[1] == "fetch":
             # inst https://example.com [-s, -r]
 
             url = cmd[2]
@@ -58,11 +58,32 @@ try:
                 installFinalTime = time.time()
             print(f"{Fore.GREEN}[100%] Scrapped {Fore.LIGHTCYAN_EX}{pkg} {Fore.GREEN}took {Fore.LIGHTCYAN_EX}{str((installFinalTime - installInitialTime) * 1000)[0:5]}ms{Fore.WHITE}")
         elif cmd[1] == "dev":
-            if cmd[2] == "--node":
+            if cmd[2] == "--npm":
                 print(f"{Fore.GREEN}Installing package.json dependencies")
                 system("npm install")
                 print(f"{Fore.GREEN}Starting web server{Fore.WHITE}")
                 system("npm run dev")
+        elif cmd[1] == "i":
+            if cmd[3] == "--npm":
+                iTime = time.time()
+                print(f"{Fore.GREEN}Installing {Fore.LIGHTCYAN_EX}{pkg}")
+                pkg = cmd[2]
+                system(f"npm install {pkg}")
+                fTime = time.time()
+                print(f"{Fore.GREEN}--> Installed {Fore.LIGHTCYAN_EX}{pkg} took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
+        elif cmd[1] == "create":
+            pkg = cmd[2]
+            iTime = time.time()
+            if cmd[3] == "--npm":
+                print(f"{Fore.GREEN}Creating {Fore.LIGHTCYAN_EX}{pkg} app")
+                system(f"npm create {pkg}@latest")
+                fTime = time.time()
+                print(f"{Fore.GREEN}[100%] Created {Fore.LIGHTCYAN_EX}{pkg} app took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
+            if cmd[3] == "--pnpm":
+                print(f"{Fore.GREEN}Creating {Fore.LIGHTCYAN_EX}{pkg} app")
+                system(f"pnpm create {pkg}@latest")
+                fTime = time.time()
+                print(f"{Fore.GREEN}[100%] Created {Fore.LIGHTCYAN_EX}{pkg} app took {Fore.LIGHTCYAN_EX}{str((fTime- iTime) * 1000)[0:5]}ms{Fore.WHITE}")
         else:
             print(f"{Fore.RED}UnknownCommand: The command you're trying to run doesn't exist. Try pywarp inst{Fore.WHITE}")
 except KeyboardInterrupt:
